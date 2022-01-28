@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>글쓰기 페이지</title>
+</head>
+<body>
+    <h1>글작성 페이지 입니다.</h1>
+    <form method="post">
+        {% csrf_token %}
+        제목<br>
+        <input type="text" name="postname"><br>
+        내용 <br>
+        <textarea name="content"  cols="50" rows="10"></textarea><br>
+        <input type="file" name="mainphoto"><br>
+        <input type="submit" value="글쓰기">
+    </form>
+</body>
+</html>
