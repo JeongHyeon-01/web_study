@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from .views import index, blog, posting,new_post
+from .views import index, blog, posting,new_post, remove_post
 
 #이미지 추가
 from django.conf.urls.static import static
@@ -25,6 +25,7 @@ urlpatterns = [
    path('blog/', blog),
    path('blog/<int:pk>/', posting, name="posting"),
    path('blog/new_post/', new_post),
+   path('blog/<int:pk>/remove/', remove_post),
 ]
 
 #이미지 URL설정
